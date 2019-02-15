@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xamEffects="clr-namespace:XamEffects;assembly=XamEffects"
+             xmlns:resource="clr-namespace:PercentCalculator.Constants;assembly=PercentCalculator"
+             xmlns:subViews="clr-namespace:PercentCalculator.ViewModels.SubViews;assembly=PercentCalculator"
+             xmlns:customRenderer="clr-namespace:PercentCalculator.CustomRenderer;assembly=PercentCalculator"
+             xmlns:extensions="clr-namespace:PercentCalculator.Extensions;assembly=PercentCalculator"
+             x:Class="PercentCalculator.Views.SubViews.PercentageCalculator"
+             NavigationPage.HasBackButton="False"
+             >
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Spacing="10">
+            <Image Source="logo.png" Scale="0.8" HorizontalOptions="Start"/>
+            <Label Text="{extensions:Translate PercentageCalculator1}" Style="{DynamicResource VolksWagenStyleMedium}" HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand" TextColor="White" FontAttributes="Bold" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="home.png" Clicked="GoBack"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.BindingContext>
+        <subViews:SubViewModel/>
+    </ContentPage.BindingContext>
+    <ScrollView>
+        <Grid Margin="5,5,5,5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout
+                x:Name="AdMob"
+                Grid.Row="0"
+                Grid.Column="0"
+                Margin="0,2,0,0"
+                
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="Transparent">
+                <customRenderer:AdBanner Size="FullBanner" BackgroundColor="Transparent" IsVisible="True" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+                <Label TextColor="Black" IsVisible="False" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="Center"
+                       FontSize="Medium" Style="{DynamicResource VolksWagenStyleMedium}" Text="AdBanner" />
+            </StackLayout>
+
+
+            <StackLayout
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="20,10,0,0"
+                BackgroundColor="Transparent">
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{extensions:Translate Whatis}" TextColor="{Binding TextColor}" VerticalOptions="Center" Style="{DynamicResource VolksWagenStyleMedium}"/>
+                        <Entry x:Name="Value1" WidthRequest="150" VerticalOptions="Center" Keyboard="Numeric"  TextColor="{Binding TextColor}"  Style="{DynamicResource VolksWagenStyleMedium}"/>
+                        <Label Text="%" VerticalOptions="Center" Style="{DynamicResource VolksWagenStyleMedium}" TextColor="{Binding TextColor}" />
+
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{extensions:Translate Of}" TextColor="{Binding TextColor}" VerticalOptions="Center" Style="{DynamicResource VolksWagenStyleMedium}"/>
+                        <Entry x:Name="Value2" WidthRequest="150" VerticalOptions="Center"  TextColor="{Binding TextColor}"  Keyboard="Numeric" Style="{DynamicResource VolksWagenStyleMedium}"/>
+                        <Label x:Name="CurrencySymbol" VerticalOptions="Center" Style="{DynamicResource VolksWagenStyleMedium}" TextColor="{Binding TextColor}" />
+
+                    </StackLayout>
+                    <Button Text="{extensions:Translate Calculate}" Clicked="CalculatePercentage" Margin="0,0,20,0" BackgroundColor="PaleVioletRed"  WidthRequest="50" HeightRequest="50"  CornerRadius="10" Style="{DynamicResource VolksWagenStyleMedium}"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="=" VerticalOptions="Center" TextColor="{Binding TextColor}" Style="{DynamicResource VolksWagenStyleMedium}"/>
+                        <Entry x:Name="Result" TextColor="{Binding TextColor}" VerticalOptions="Center" WidthRequest="150" Keyboard="Numeric" Style="{DynamicResource VolksWagenStyleMedium}"/>
+                        <Label x:Name="CurrencySymbol2" VerticalOptions="Center" Style="{DynamicResource VolksWagenStyleMedium}" TextColor="{Binding TextColor}" />
+
+                    </StackLayout>
+                </StackLayout>
+                
+
+                
+
+                
+            </StackLayout>
+
+            
+        </Grid>
+    </ScrollView>
+</ContentPage>

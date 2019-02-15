@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             xmlns:effects="clr-namespace:AiForms.Effects;assembly=AiForms.Effects"
+             xmlns:resources="clr-namespace:PercentCalculator.Constants;assembly=PercentCalculator"
+             x:Class="PercentCalculator.Views.Settings.SettingsLanguagePop.LanguagePopUpPage">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True" />
+    </pages:PopupPage.Animation>
+    <StackLayout  effects:Border.On="True" effects:Border.Radius="10" Margin="20,5,20,20" Padding="20,10,20,20" BackgroundColor="#FFFFFF" VerticalOptions="CenterAndExpand">
+        <Picker x:Name="picker" Title="Choose Desired Language" TextColor="Black" />
+        <Button Text="Selection Complete" Clicked="OnUpdateLangugeClicked" CornerRadius="10" BackgroundColor="MediumSlateBlue"
+                 Style="{DynamicResource VolksWagenStyleMedium}"
+                TextColor="White" HorizontalOptions="FillAndExpand"/>
+    </StackLayout>
+
+    </pages:PopupPage>

@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Amount" xml:space="preserve">
+    <value>रकम:</value>
+  </data>
+  <data name="Answer" xml:space="preserve">
+    <value>उत्तर</value>
+  </data>
+  <data name="Calculate" xml:space="preserve">
+    <value>गणना</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>% रेज़गी</value>
+  </data>
+  <data name="CompoundFrequency" xml:space="preserve">
+    <value>प्रति वर्ष यौगिक आवृत्ति:</value>
+  </data>
+  <data name="CompoundInterest" xml:space="preserve">
+    <value>चक्रवृद्धि ब्याज</value>
+  </data>
+  <data name="CompoundInterest1" xml:space="preserve">
+    <value>चक्रवृद्धि ब्याज</value>
+  </data>
+  <data name="Cost" xml:space="preserve">
+    <value>लागत:</value>
+  </data>
+  <data name="CumulativeGrowthCalculator" xml:space="preserve">
+    <value>संचयी विकास कैलकुलेटर</value>
+  </data>
+  <data name="CumulativeGrowthCalculator1" xml:space="preserve">
+    <value>संचयी विकास कैलकुलेटर</value>
+  </data>
+  <data name="Difference" xml:space="preserve">
+    <value>अंतर:</value>
+  </data>
+  <data name="Discount" xml:space="preserve">
+    <value>छूट</value>
+  </data>
+  <data name="DoublingCalculator" xml:space="preserve">
+    <value>डबिंग कैलकुलर</value>
+  </data>
+  <data name="DoublingCalculator1" xml:space="preserve">
+    <value>डबिंग कैलकुलर</value>
+  </data>
+  <data name="Doublingt" xml:space="preserve">
+    <value>दोहरीकरण टी:</value>
+  </data>
+  <data name="EndYear" xml:space="preserve">
+    <value>अंत वर्ष:</value>
+  </data>
+  <data name="EnterFirstValue" xml:space="preserve">
+    <value>प्रथम मान दर्ज करें:</value>
+  </data>
+  <data name="EnterSecondValue" xml:space="preserve">
+    <value>2 मान दर्ज करें:</value>
+  </data>
+  <data name="FinalBalance" xml:space="preserve">
+    <value>अंतिम राशि:</value>
+  </data>
+  <data name="FinalValue" xml:space="preserve">
+    <value>अंतिम मूल्य:</value>
+  </data>
+  <data name="FractionToPercentage" xml:space="preserve">
+    <value>प्रवेश करने के लिए कारखाना</value>
+  </data>
+  <data name="FractionToPercentage1" xml:space="preserve">
+    <value>प्रवेश करने के लिए कारखाना</value>
+  </data>
+  <data name="FromValue" xml:space="preserve">
+    <value>मान से:</value>
+  </data>
+  <data name="GrossPrice" xml:space="preserve">
+    <value>सकल मूल्य:</value>
+  </data>
+  <data name="GrowthRate" xml:space="preserve">
+    <value>विकास दर</value>
+  </data>
+  <data name="Increase" xml:space="preserve">
+    <value>बढ़ना:</value>
+  </data>
+  <data name="IncreaseBy" xml:space="preserve">
+    <value>का इजाफा</value>
+  </data>
+  <data name="Inflation" xml:space="preserve">
+    <value>मुद्रास्फीति:</value>
+  </data>
+  <data name="InflationCalculator" xml:space="preserve">
+    <value>इफ्लेशन कैलकुलेटर</value>
+  </data>
+  <data name="InflationCalculator1" xml:space="preserve">
+    <value>इफ्लेशन कैलकुलेटर</value>
+  </data>
+  <data name="InitialBalance" xml:space="preserve">
+    <value>प्रारंभिक संतुलन:</value>
+  </data>
+  <data name="InitialValue" xml:space="preserve">
+    <value>प्रारंभिक मूल्य:</value>
+  </data>
+  <data name="InterestRate" xml:space="preserve">
+    <value>ब्याज दर:</value>
+  </data>
+  <data name="IsSameAs" xml:space="preserve">
+    <value>वैसा ही है</value>
+  </data>
+  <data name="IsWhatPercentOf" xml:space="preserve">
+    <value>प्रतिशत क्या है</value>
+  </data>
+  <data name="LoanCalculator" xml:space="preserve">
+    <value>ऋण गणक</value>
+  </data>
+  <data name="LoanCalculator1" xml:space="preserve">
+    <value>ऋण गणक</value>
+  </data>
+  <data name="Margin" xml:space="preserve">
+    <value>हाशिया:</value>
+  </data>
+  <data name="MarginCalculator" xml:space="preserve">
+    <value>मार्गिन कैलकुलर</value>
+  </data>
+  <data name="MarginCalculator1" xml:space="preserve">
+    <value>मार्गिन कैलकुलर</value>
+  </data>
+  <data name="Markup" xml:space="preserve">
+    <value>मार्कअप:</value>
+  </data>
+  <data name="MarkupCalculator" xml:space="preserve">
+    <value>मार्क कैलकुलर</value>
+  </data>
+  <data name="MarkupCalculator1" xml:space="preserve">
+    <value>मार्कअप कैलकुलेटर</value>
+  </data>
+  <data name="NetPrice" xml:space="preserve">
+    <value>शुद्ध मूल्य:</value>
+  </data>
+  <data name="NoOfPeople" xml:space="preserve">
+    <value>लोगों की संख्या:</value>
+  </data>
+  <data name="NumberOfPeriods" xml:space="preserve">
+    <value>पीरियड्स की संख्या:</value>
+  </data>
+  <data name="NumberOfYears" xml:space="preserve">
+    <value>वर्षों की संख्या:</value>
+  </data>
+  <data name="Of" xml:space="preserve">
+    <value>% का</value>
+  </data>
+  <data name="PercentageCalculator" xml:space="preserve">
+    <value>पेरिसेंटेज कैलकुलर</value>
+  </data>
+  <data name="PercentageCalculator1" xml:space="preserve">
+    <value>पेरिसेंटेज कैलकुलर</value>
+  </data>
+  <data name="PercentageChange" xml:space="preserve">
+    <value>प्रतिशत परिवर्तन</value>
+  </data>
+  <data name="PercentageChange1" xml:space="preserve">
+    <value>प्रतिशत परिवर्तन</value>
+  </data>
+  <data name="PercentageDiscount" xml:space="preserve">
+    <value>पेरेज़ेंट छूट</value>
+  </data>
+  <data name="PercentageDiscount1" xml:space="preserve">
+    <value>पेरेज़ेंट छूट</value>
+  </data>
+  <data name="PercentageIncrease" xml:space="preserve">
+    <value>पेरसेंटेज इंक्रीज</value>
+  </data>
+  <data name="PercentageIncrease1" xml:space="preserve">
+    <value>पेरसेंटेज इंक्रीज</value>
+  </data>
+  <data name="PercentageOf" xml:space="preserve">
+    <value>का प्रतिशत</value>
+  </data>
+  <data name="PercentageOf1" xml:space="preserve">
+    <value>का प्रतिशत</value>
+  </data>
+  <data name="PercentCalculator" xml:space="preserve">
+    <value>प्रतिशत कैलकुलेटर</value>
+  </data>
+  <data name="Profit" xml:space="preserve">
+    <value>फायदा:</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>परिणाम:</value>
+  </data>
+  <data name="Revenue" xml:space="preserve">
+    <value>राजस्व:</value>
+  </data>
+  <data name="SalesTax" xml:space="preserve">
+    <value>बिक्री कर</value>
+  </data>
+  <data name="SalesTax1" xml:space="preserve">
+    <value>बिक्री कर</value>
+  </data>
+  <data name="SalesTaxPercentage" xml:space="preserve">
+    <value>बिक्री कर:</value>
+  </data>
+  <data name="SaveChanges" xml:space="preserve">
+    <value>परिवर्तनों को सुरक्षित करें</value>
+  </data>
+  <data name="Selling" xml:space="preserve">
+    <value>बेचना:</value>
+  </data>
+  <data name="StartYear" xml:space="preserve">
+    <value>शुरुवाती साल:</value>
+  </data>
+  <data name="TaxAmount" xml:space="preserve">
+    <value>कर राशि:</value>
+  </data>
+  <data name="TipAmount" xml:space="preserve">
+    <value>टिप राशि:</value>
+  </data>
+  <data name="TipCalculator" xml:space="preserve">
+    <value>टिप कैलकुलेटर</value>
+  </data>
+  <data name="TipCalculator1" xml:space="preserve">
+    <value>टिप कैलकुलेटर</value>
+  </data>
+  <data name="TipPercentage" xml:space="preserve">
+    <value>टिप प्रतिशत:</value>
+  </data>
+  <data name="TotalAmount" xml:space="preserve">
+    <value>कुल रकम:</value>
+  </data>
+  <data name="TotalGrowth" xml:space="preserve">
+    <value>कुल वृद्धि:</value>
+  </data>
+  <data name="TotalInflation" xml:space="preserve">
+    <value>कुल मुद्रास्फीति:</value>
+  </data>
+  <data name="TotalPerPerson" xml:space="preserve">
+    <value>कुल प्रति व्यक्ति:</value>
+  </data>
+  <data name="TotalToPay" xml:space="preserve">
+    <value>भुगतान करने के लिए कुल:</value>
+  </data>
+  <data name="ToValue" xml:space="preserve">
+    <value>मान के लिए:</value>
+  </data>
+  <data name="Vat" xml:space="preserve">
+    <value>वैट:</value>
+  </data>
+  <data name="VatCalculator" xml:space="preserve">
+    <value>वैट कैलकुलर</value>
+  </data>
+  <data name="VatCalculator1" xml:space="preserve">
+    <value>वैट कैलकुलर</value>
+  </data>
+  <data name="Whatis" xml:space="preserve">
+    <value>क्या है</value>
+  </data>
+  <data name="off" xml:space="preserve">
+    <value>का</value>
+  </data>
+  <data name="Increas" xml:space="preserve">
+    <value>बढ़ना</value>
+  </data>
+  <data name="By" xml:space="preserve">
+    <value>द्वारा</value>
+  </data>
+  <data name="With" xml:space="preserve">
+    <value>साथ में</value>
+  </data>
+  <data name="PoDescription1" xml:space="preserve">
+    <value>प्रतिशत क्या है</value>
+  </data>
+  <data name="Discoun" xml:space="preserve">
+    <value>छूट</value>
+  </data>
+  <data name="doubling" xml:space="preserve">
+    <value>राशि दोहरीकरण समय की गणना करता है</value>
+  </data>
+  <data name="PchDescription1" xml:space="preserve">
+    <value>मूल्य वृद्धि से</value>
+  </data>
+  <data name="PchDescription2" xml:space="preserve">
+    <value>सेवा मेरे</value>
+  </data>
+  <data name="TcDescription" xml:space="preserve">
+    <value>गणना करें कि समान रूप से रेस्तरां बिल वितरित करता है</value>
+  </data>
+  <data name="MgDescription" xml:space="preserve">
+    <value>मार्जिन के आधार पर विक्रय मूल्य की गणना करता है</value>
+  </data>
+  <data name="MkDescription" xml:space="preserve">
+    <value>मार्कअप के आधार पर राजस्व की गणना करता है</value>
+  </data>
+  <data name="StDescription" xml:space="preserve">
+    <value>टैक्स से बिक्री कर की गणना करता है %</value>
+  </data>
+  <data name="fractionPercentage" xml:space="preserve">
+    <value>अंश से प्रतिशत की गणना करें.</value>
+  </data>
+  <data name="cumulative" xml:space="preserve">
+    <value>संचयी विकास की गणना करता है</value>
+  </data>
+  <data name="loan1" xml:space="preserve">
+    <value>समय के साथ ऋण की गणना करता है</value>
+  </data>
+  <data name="inflation1" xml:space="preserve">
+    <value>समय तक मुद्रास्फीति की गणना करता है</value>
+  </data>
+  <data name="compoundInterest2" xml:space="preserve">
+    <value>चक्रवृद्धि ब्याज की गणना करता है</value>
+  </data>
+  <data name="vat1" xml:space="preserve">
+    <value>वैट की गणना करता है</value>
+  </data>
+
+   <data name="GrossCost" xml:space="preserve">
+    <value>सकल लागत:</value>
+  </data>
+  <data name="MarginSalesTax" xml:space="preserve">
+    <value>मार्जिन और सेल्स टैक्स कैलकुलेटर</value>
+  </data>
+  <data name="MarginSalesTax2" xml:space="preserve">
+    <value>मार्जिन और सेल्स टैक्स कैलकुलेटर</value>
+  </data>
+  <data name="MarginVat" xml:space="preserve">
+    <value>मार्जिन और वैट कैलकुलेटर</value>
+  </data>
+  <data name="MarginVat2" xml:space="preserve">
+    <value>मार्जिन और वैट कैलकुलेटर</value>
+  </data>
+  <data name="MsDescription" xml:space="preserve">
+    <value>कैलकुलेटर मार्जिन और बिक्री कर</value>
+  </data>
+  <data name="MvDescription" xml:space="preserve">
+    <value>मार्जिन और वैट की गणना करता है</value>
+  </data>
+</root>

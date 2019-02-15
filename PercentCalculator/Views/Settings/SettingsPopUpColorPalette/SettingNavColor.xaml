@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 xmlns:ef="clr-namespace:AiForms.Effects;assembly=AiForms.Effects"
+                 xmlns:settings="clr-namespace:PercentCalculator.ViewModels.Settings;assembly=PercentCalculator"
+                 x:Class="PercentCalculator.Views.Settings.SettingsPopUpColorPalette.SettingNavColor">
+
+    <pages:PopupPage.BindingContext>
+        <settings:SettingsViewModel/>
+    </pages:PopupPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Margin="60,200,60,200" ef:Border.On="True" ef:Border.Radius="10" BackgroundColor="GhostWhite">
+            <Label Text="Choose Title Bar Color" Style="{DynamicResource VolksWagenStyleMedium}" FontSize="Large" FontAttributes="Bold" Margin="10,5,0,0"
+                   TextColor="Black" />
+
+            <StackLayout Orientation="Horizontal" Margin="10,15,10,10">
+                <Button CornerRadius="300" WidthRequest="50" HeightRequest="50" Clicked="SelectedColor" BackgroundColor="#F44236" />
+                <Button CornerRadius="300" WidthRequest="50" HeightRequest="50" Clicked="SelectedColor" BackgroundColor="#CC1A56" />
+                <Button CornerRadius="300" WidthRequest="50" HeightRequest="50" Clicked="SelectedColor" BackgroundColor="#9C28B1" />
+                <Button CornerRadius="300" WidthRequest="50" HeightRequest="50" Clicked="SelectedColor" BackgroundColor="#673BB7" />
+                <Button CornerRadius="300" WidthRequest="50" HeightRequest="50" Clicked="SelectedColor" BackgroundColor="#009788" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="10,10,10,10">
+                <Button CornerRadius="300" WidthRequest="50" HeightRequest="50" Clicked="SelectedColor" BackgroundColor="#00BCD5" />
+                <Button CornerRadius="300" WidthRequest="50" HeightRequest="50" Clicked="SelectedColor" BackgroundColor="#03A9F6" />
+                <Button CornerRadius="300" WidthRequest="50" HeightRequest="50" Clicked="SelectedColor" BackgroundColor="#2196F3" />
+                <Button CornerRadius="300" WidthRequest="50" HeightRequest="50" Clicked="SelectedColor" BackgroundColor="#4CB050" />
+                <Button CornerRadius="300" WidthRequest="50" HeightRequest="50" Clicked="SelectedColor" BackgroundColor="#8BC24A" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="10,10,10,10">
+                <Button CornerRadius="300" WidthRequest="50" HeightRequest="50" Clicked="SelectedColor" BackgroundColor="#CDDC39" />
+                <Button CornerRadius="300" WidthRequest="50" HeightRequest="50" Clicked="SelectedColor" BackgroundColor="#0FEC17" />
+                <Button CornerRadius="300" WidthRequest="50" HeightRequest="50" Clicked="SelectedColor" BackgroundColor="#0FF970" />
+                <Button CornerRadius="300" WidthRequest="50" HeightRequest="50" Clicked="SelectedColor" BackgroundColor="#FE5722" />
+                <Button CornerRadius="300" WidthRequest="50" HeightRequest="50" Clicked="SelectedColor" BackgroundColor="#9E9E9E" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="10,10,10,10">
+                <Button CornerRadius="300" WidthRequest="50" HeightRequest="50" BackgroundColor="#5E7E89" />
+                <Button CornerRadius="300" WidthRequest="50" HeightRequest="50" BackgroundColor="#1ABC9C" />
+                <Button CornerRadius="300" WidthRequest="50" HeightRequest="50" BackgroundColor="#143A85" />
+                <Button CornerRadius="300" WidthRequest="50" HeightRequest="50" BackgroundColor="#5C0490" />
+                <Button CornerRadius="300" WidthRequest="50" HeightRequest="50" BackgroundColor="#9B5657" />
+            </StackLayout>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</pages:PopupPage>

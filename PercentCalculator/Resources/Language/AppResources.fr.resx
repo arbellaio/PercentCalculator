@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Amount" xml:space="preserve">
+    <value>Montant:</value>
+  </data>
+  <data name="Answer" xml:space="preserve">
+    <value>Réponse</value>
+  </data>
+  <data name="Calculate" xml:space="preserve">
+    <value>Calculer</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>% Changement</value>
+  </data>
+  <data name="CompoundFrequency" xml:space="preserve">
+    <value>Fréquence composée par an:</value>
+  </data>
+  <data name="CompoundInterest" xml:space="preserve">
+    <value>INTÉRÊTS COMPOSÉS</value>
+  </data>
+  <data name="CompoundInterest1" xml:space="preserve">
+    <value>Intérêts composés</value>
+  </data>
+  <data name="Cost" xml:space="preserve">
+    <value>Coût:</value>
+  </data>
+  <data name="CumulativeGrowthCalculator" xml:space="preserve">
+    <value>CROISSANCE CUMULATIVE</value>
+  </data>
+  <data name="CumulativeGrowthCalculator1" xml:space="preserve">
+    <value>Croissance cumulative</value>
+  </data>
+  <data name="Difference" xml:space="preserve">
+    <value>Différence:</value>
+  </data>
+  <data name="Discount" xml:space="preserve">
+    <value>Remise</value>
+  </data>
+  <data name="DoublingCalculator" xml:space="preserve">
+    <value>CALCULATEUR DOUBLANT</value>
+  </data>
+  <data name="DoublingCalculator1" xml:space="preserve">
+    <value>Doubler le calculateur</value>
+  </data>
+  <data name="Doublingt" xml:space="preserve">
+    <value>Doubler t:</value>
+  </data>
+  <data name="EndYear" xml:space="preserve">
+    <value>Fin d'année:</value>
+  </data>
+  <data name="EnterFirstValue" xml:space="preserve">
+    <value>Entrer la 1ère valeur:</value>
+  </data>
+  <data name="EnterSecondValue" xml:space="preserve">
+    <value>Entrer la 2ème valeur:</value>
+  </data>
+  <data name="FinalBalance" xml:space="preserve">
+    <value>Solde final:</value>
+  </data>
+  <data name="FinalValue" xml:space="preserve">
+    <value>Valeur finale:</value>
+  </data>
+  <data name="FractionToPercentage" xml:space="preserve">
+    <value>FRACTION À POURCENTAGE</value>
+  </data>
+  <data name="FractionToPercentage1" xml:space="preserve">
+    <value>Fraction à pourcentage</value>
+  </data>
+  <data name="FromValue" xml:space="preserve">
+    <value>De la valeur:</value>
+  </data>
+  <data name="GrossPrice" xml:space="preserve">
+    <value>Prix ​​brut:</value>
+  </data>
+  <data name="GrowthRate" xml:space="preserve">
+    <value>Taux de croissance</value>
+  </data>
+  <data name="Increase" xml:space="preserve">
+    <value>Augmenter:</value>
+  </data>
+  <data name="IncreaseBy" xml:space="preserve">
+    <value>Augmenté de</value>
+  </data>
+  <data name="Inflation" xml:space="preserve">
+    <value>Inflation:</value>
+  </data>
+  <data name="InflationCalculator" xml:space="preserve">
+    <value>CALCULATEUR D'INFLATION</value>
+  </data>
+  <data name="InflationCalculator1" xml:space="preserve">
+    <value>Calculateur d'inflation</value>
+  </data>
+  <data name="InitialBalance" xml:space="preserve">
+    <value>Balance initiale:</value>
+  </data>
+  <data name="InitialValue" xml:space="preserve">
+    <value>Valeur initiale:</value>
+  </data>
+  <data name="InterestRate" xml:space="preserve">
+    <value>Taux d'intérêt:</value>
+  </data>
+  <data name="IsSameAs" xml:space="preserve">
+    <value>est identique à</value>
+  </data>
+  <data name="IsWhatPercentOf" xml:space="preserve">
+    <value>est quel pourcentage de</value>
+  </data>
+  <data name="LoanCalculator" xml:space="preserve">
+    <value>LOAN CALCULATOR</value>
+  </data>
+  <data name="LoanCalculator1" xml:space="preserve">
+    <value>Loan Calculator</value>
+  </data>
+  <data name="Margin" xml:space="preserve">
+    <value>Marge:</value>
+  </data>
+  <data name="MarginCalculator" xml:space="preserve">
+    <value>CALCULATEUR DE MARGE</value>
+  </data>
+  <data name="MarginCalculator1" xml:space="preserve">
+    <value>Calculateur de marge</value>
+  </data>
+  <data name="Markup" xml:space="preserve">
+    <value>Balisage:</value>
+  </data>
+  <data name="MarkupCalculator" xml:space="preserve">
+    <value>CALCUL DE MARQUAGE</value>
+  </data>
+  <data name="MarkupCalculator1" xml:space="preserve">
+    <value>Calculatrice de balisage</value>
+  </data>
+  <data name="NetPrice" xml:space="preserve">
+    <value>Prix ​​net:</value>
+  </data>
+  <data name="NoOfPeople" xml:space="preserve">
+    <value>Nombre de personnes:</value>
+  </data>
+  <data name="NumberOfPeriods" xml:space="preserve">
+    <value>Nombre de périodes:</value>
+  </data>
+  <data name="NumberOfYears" xml:space="preserve">
+    <value>Nombre d'années:</value>
+  </data>
+  <data name="Of" xml:space="preserve">
+    <value>% De</value>
+  </data>
+  <data name="PercentageCalculator" xml:space="preserve">
+    <value>CALCUL DE POURCENTAGE</value>
+  </data>
+  <data name="PercentageCalculator1" xml:space="preserve">
+    <value>Calculatrice en pourcentage</value>
+  </data>
+  <data name="PercentageChange" xml:space="preserve">
+    <value>CHANGEMENT DE POURCENTAGE</value>
+  </data>
+  <data name="PercentageChange1" xml:space="preserve">
+    <value>Variation en pourcentage</value>
+  </data>
+  <data name="PercentageDiscount" xml:space="preserve">
+    <value>REMISE EN POURCENTAGE</value>
+  </data>
+  <data name="PercentageDiscount1" xml:space="preserve">
+    <value>Pourcentage de réduction</value>
+  </data>
+  <data name="PercentageIncrease" xml:space="preserve">
+    <value>AUGMENTATION DU POURCENTAGE</value>
+  </data>
+  <data name="PercentageIncrease1" xml:space="preserve">
+    <value>Augmentation en pourcentage</value>
+  </data>
+  <data name="PercentageOf" xml:space="preserve">
+    <value>POURCENTAGE DE</value>
+  </data>
+  <data name="PercentageOf1" xml:space="preserve">
+    <value>Pourcentage de</value>
+  </data>
+  <data name="PercentCalculator" xml:space="preserve">
+    <value>Calculatrice en pourcentage</value>
+  </data>
+  <data name="Profit" xml:space="preserve">
+    <value>Profit:</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>Résultat:</value>
+  </data>
+  <data name="Revenue" xml:space="preserve">
+    <value>Revenu:</value>
+  </data>
+  <data name="SalesTax" xml:space="preserve">
+    <value>TAXE DE VENTE</value>
+  </data>
+  <data name="SalesTax1" xml:space="preserve">
+    <value>Taxe de vente</value>
+  </data>
+  <data name="SalesTaxPercentage" xml:space="preserve">
+    <value>Taxe de vente:</value>
+  </data>
+  <data name="SaveChanges" xml:space="preserve">
+    <value>Sauvegarder les modifications</value>
+  </data>
+  <data name="Selling" xml:space="preserve">
+    <value>Vente:</value>
+  </data>
+  <data name="StartYear" xml:space="preserve">
+    <value>Année de début:</value>
+  </data>
+  <data name="TaxAmount" xml:space="preserve">
+    <value>Montant de la taxe:</value>
+  </data>
+  <data name="TipAmount" xml:space="preserve">
+    <value>Montant du pourboire:</value>
+  </data>
+  <data name="TipCalculator" xml:space="preserve">
+    <value>CALCULATEUR DE POINTE</value>
+  </data>
+  <data name="TipCalculator1" xml:space="preserve">
+    <value>Calculateur de pourboire</value>
+  </data>
+  <data name="TipPercentage" xml:space="preserve">
+    <value>Pourcentage de pourboire:</value>
+  </data>
+  <data name="TotalAmount" xml:space="preserve">
+    <value>Montant total:</value>
+  </data>
+  <data name="TotalGrowth" xml:space="preserve">
+    <value>Croissance totale:</value>
+  </data>
+  <data name="TotalInflation" xml:space="preserve">
+    <value>Total inflation:</value>
+  </data>
+  <data name="TotalPerPerson" xml:space="preserve">
+    <value>Total Per Person:</value>
+  </data>
+  <data name="TotalToPay" xml:space="preserve">
+    <value>Le total à payer:</value>
+  </data>
+  <data name="ToValue" xml:space="preserve">
+    <value>Évaluer:</value>
+  </data>
+  <data name="Vat" xml:space="preserve">
+    <value>T.V.A.:</value>
+  </data>
+  <data name="VatCalculator" xml:space="preserve">
+    <value>CALCULATEUR DE TVA</value>
+  </data>
+  <data name="VatCalculator1" xml:space="preserve">
+    <value>Calculateur de TVA</value>
+  </data>
+  <data name="Whatis" xml:space="preserve">
+    <value>Quel est</value>
+  </data>
+  <data name="off" xml:space="preserve">
+    <value>de</value>
+  </data>
+  <data name="Increas" xml:space="preserve">
+    <value>Augmenter</value>
+  </data>
+  <data name="By" xml:space="preserve">
+    <value>Par</value>
+  </data>
+  <data name="With" xml:space="preserve">
+    <value>avec</value>
+  </data>
+  <data name="PoDescription1" xml:space="preserve">
+    <value>est quel pourcentage de</value>
+  </data>
+  <data name="Discoun" xml:space="preserve">
+    <value>remise</value>
+  </data>
+  <data name="doubling" xml:space="preserve">
+    <value>Calcule le montant du temps de doublement</value>
+  </data>
+  <data name="PchDescription1" xml:space="preserve">
+    <value>Prix ​​à partir de</value>
+  </data>
+  <data name="PchDescription2" xml:space="preserve">
+    <value>à</value>
+  </data>
+  <data name="TcDescription" xml:space="preserve">
+    <value>Calculer qui distribue la facture de restaurant uniformément</value>
+  </data>
+  <data name="MgDescription" xml:space="preserve">
+    <value>Calcule le prix de vente en fonction de la marge</value>
+  </data>
+  <data name="MkDescription" xml:space="preserve">
+    <value>Calcule les revenus en fonction du balisage</value>
+  </data>
+  <data name="StDescription" xml:space="preserve">
+    <value>Calcule la taxe de vente à partir de la taxe %</value>
+  </data>
+  <data name="fractionPercentage" xml:space="preserve">
+    <value>Calculer le pourcentage de la fraction.</value>
+  </data>
+  <data name="cumulative" xml:space="preserve">
+    <value>Calcule la croissance cumulative</value>
+  </data>
+  <data name="loan1" xml:space="preserve">
+    <value>Calcule le prêt au fil du temps</value>
+  </data>
+  <data name="inflation1" xml:space="preserve">
+    <value>Calcule l'inflation par heure</value>
+  </data>
+  <data name="compoundInterest2" xml:space="preserve">
+    <value>Calcule les intérêts composés</value>
+  </data>
+  <data name="vat1" xml:space="preserve">
+    <value>Calcule la TVA</value>
+  </data>
+
+   <data name="GrossCost" xml:space="preserve">
+    <value>Coût brut:</value>
+  </data>
+  <data name="MarginSalesTax" xml:space="preserve">
+    <value>CALCULATEUR DE TAXES SUR LES MARGES VENTES</value>
+  </data>
+  <data name="MarginSalesTax2" xml:space="preserve">
+    <value>Calculateur de marge et de taxe vente</value>
+  </data>
+  <data name="MarginVat" xml:space="preserve">
+    <value>CALCULATEUR DE MARGE ET DE TVA</value>
+  </data>
+  <data name="MarginVat2" xml:space="preserve">
+    <value>Calculateur de marge et de TVA</value>
+  </data>
+  <data name="MsDescription" xml:space="preserve">
+    <value>Calcule la marge et la taxe de vente</value>
+  </data>
+  <data name="MvDescription" xml:space="preserve">
+    <value>Calcule la marge et la TVA</value>
+  </data>
+</root>

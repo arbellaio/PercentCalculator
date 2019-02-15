@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+   
+    <Style x:Key="buttonRegister" TargetType="Button">
+        <Setter Property="TextColor" Value="White"></Setter>
+        <Setter Property="FontFamily" Value="Avenir-Medium.ttf#Avenir-Medium"/>
+        <Setter Property="BorderRadius" Value="8"></Setter>
+        <Setter Property="HeightRequest" Value="55"></Setter>
+        <Setter Property="WidthRequest" Value="10"></Setter>
+        <Setter Property="BackgroundColor" Value="#F08080"></Setter>
+        <Setter Property="Margin" Value="20,35,20,0"></Setter>
+    </Style>
+  
+</ResourceDictionary>

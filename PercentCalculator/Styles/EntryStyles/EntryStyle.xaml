@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:ef="clr-namespace:AiForms.Effects;assembly=AiForms.Effects">
+
+
+    <Style x:Key="entryStyle" TargetType="Entry">
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="PlaceholderColor" Value="#80FFFFFF" />
+        <Setter Property="WidthRequest" Value="10" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="FontAttributes" Value="None" />
+        <Setter Property="FontSize" Value="Large" />
+        <Setter Property="FontFamily" Value="OpenSans" />
+        <Setter Property="Margin" Value="20,3,20,2" />
+        <Setter Property="FontFamily" Value="Avenir-Medium.ttf#Avenir-Medium" />
+        <!--  Green #50EA3D -->
+        <!-- 35B2CF -->
+    </Style>
+
+</ResourceDictionary>

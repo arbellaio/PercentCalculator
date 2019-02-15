@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:settings="clr-namespace:PercentCalculator.ViewModels.Settings;assembly=PercentCalculator"
+             xmlns:colorPicker="clr-namespace:Amporis.Xamarin.Forms.ColorPicker;assembly=Amporis.Xamarin.Forms.ColorPicker"
+             xmlns:ef="clr-namespace:AiForms.Effects;assembly=AiForms.Effects"
+             xmlns:resources="clr-namespace:PercentCalculator.Constants;assembly=PercentCalculator"
+             xmlns:extensions="clr-namespace:PercentCalculator.Extensions;assembly=PercentCalculator"
+             x:Class="PercentCalculator.Views.Settings.SettingsPage"
+             NavigationPage.HasBackButton="False">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Spacing="10">
+            <Image Source="logo.png" Scale="0.8" HorizontalOptions="Start" />
+            <Label Text="Settings" Style="{DynamicResource VolksWagenStyleMedium}" HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand" TextColor="White" FontAttributes="Bold" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="home.png" Clicked="GoBack" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.BindingContext>
+        <settings:SettingsViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+
+            <StackLayout Orientation="Horizontal" ef:Border.On="True"
+                         ef:Border.Radius="10" Padding="20,30,20,20"
+                         Margin="10,10,10,10" BackgroundColor="White" HorizontalOptions="FillAndExpand">
+                <Label
+                    Text="App Version"
+                    TextColor="DarkGray"
+                    FontAttributes="Bold"
+                    VerticalOptions="Center"
+                    Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                <Label x:Name="Version" Text="1.0" HorizontalOptions="EndAndExpand" TextColor="DarkGray"  Style="{DynamicResource VolksWagenStyleMedium}"  />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" ef:Border.On="True"
+                         ef:Border.Radius="10" Padding="20,30,20,20"
+                         Margin="10,10,10,10" BackgroundColor="White" HorizontalOptions="FillAndExpand">
+                <Label
+                    Text="Dark Mode"
+                    TextColor="DarkGray"
+                    FontAttributes="Bold"
+                    Style="{DynamicResource VolksWagenStyleMedium}" />
+                <Switch x:Name="ModeToggle" Toggled="DarkModeOn" HorizontalOptions="EndAndExpand" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" ef:Border.On="True"
+                         ef:Border.Radius="10" Padding="20,30,20,20"
+                         Margin="10,10,10,10" BackgroundColor="White" HorizontalOptions="FillAndExpand">
+             <!--   <Button ef:Border.On="True" ef:Border.Radius="10"
+                        TextColor="PaleVioletRed"
+                        BackgroundColor="Transparent"
+                        Text="Select Language"
+                        HorizontalOptions="Start"
+                        Clicked="LanguagePicker_OnClicked"
+                        Style="{DynamicResource VolksWagenStyleMedium}"
+                        VerticalOptions="Center" />
+-->
+                <Picker x:Name="picker" Title="Choose Desired Language" ef:Border.On="True" ef:Border.Radius="10"
+                        TextColor="PaleVioletRed"
+                        Style="{DynamicResource VolksWagenStyleMedium}"
+                        VerticalOptions="Center" SelectedIndexChanged="Handle_SelectedIndexChanged"  />
+                
+                <!--<Label x:Name="SelectedLanguageLabel" Style="{DynamicResource VolksWagenStyleMedium}"
+                       HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center"
+                       VerticalOptions="Center" HorizontalTextAlignment="Center" TextColor="PaleVioletRed" />-->
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" ef:Border.On="True"
+                         ef:Border.Radius="10" Padding="20,30,20,20"
+                         Margin="10,10,10,10" BackgroundColor="White" HorizontalOptions="FillAndExpand">
+                <Picker x:Name="CurrencyPicker" ef:Border.On="True" ef:Border.Radius="10"
+                        TextColor="PaleVioletRed"
+                        Title="Select Currency" Style="{DynamicResource VolksWagenStyleMedium}"
+                        VerticalOptions="Center" SelectedItem="{Binding SelectedCurrency}" />
+                <Label x:Name="CurrencySymbol" Style="{DynamicResource VolksWagenStyleMedium}"
+                       Text="{Binding CurrencySymbol,Mode=TwoWay}" HorizontalOptions="EndAndExpand"
+                       VerticalTextAlignment="Center"
+                       VerticalOptions="Center" HorizontalTextAlignment="Center" TextColor="PaleVioletRed" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" ef:Border.On="True"
+                         ef:Border.Radius="10" Padding="20,30,20,20"
+                         Margin="10,10,10,10" BackgroundColor="White" HorizontalOptions="FillAndExpand">
+
+                <Picker x:Name="formatpicker" Title="Choose Desired Format" ef:Border.On="True" ef:Border.Radius="10"
+                        TextColor="PaleVioletRed"
+                        Style="{DynamicResource VolksWagenStyleMedium}"
+                        VerticalOptions="Center" SelectedIndexChanged="FormatPicker_OnSelectedIndexChanged"  />
+            </StackLayout>
+
+            <StackLayout Padding="20,10,20,10"
+                         Margin="10,10,10,10">
+                <Button CornerRadius="10" BackgroundColor="MediumSlateBlue"
+                        Text="{extensions:Translate SaveChanges}" Style="{DynamicResource VolksWagenStyleMedium}"
+                        TextColor="White"
+                        Clicked="SaveChanges" />
+            </StackLayout>
+
+            <StackLayout Padding="20,10,20,10"
+                         Margin="10,10,10,10">
+                <Button CornerRadius="10" BackgroundColor="MediumSeaGreen"
+                        Text="Remove Ads" Style="{DynamicResource VolksWagenStyleMedium}"
+                        TextColor="White"
+                        Clicked="RemoveAds" />
+            </StackLayout>
+
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

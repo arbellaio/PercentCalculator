@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:customRenderer="clr-namespace:PercentCalculator.CustomRenderer;assembly=PercentCalculator"
+             x:Class="PercentCalculator.Views.History.HistoryPage"
+             BackgroundColor="GhostWhite">
+    <ContentPage.Content>
+        <StackLayout>
+        <StackLayout
+            x:Name="AdMob"
+            Margin="0,2,0,0"
+            HorizontalOptions="FillAndExpand"
+            BackgroundColor="Gainsboro">
+            <customRenderer:AdBanner Size="FullBanner" IsVisible="True" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+            <Label TextColor="Black" IsVisible="False" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="Center"
+                   FontSize="Medium" Style="{DynamicResource VolksWagenStyleMedium}" Text="AdBanner" />
+        </StackLayout>
+
+        <StackLayout Margin="5,10,5,10">
+         <ListView x:Name="ListView" BackgroundColor="BurlyWood" HasUnevenRows="True" SeparatorVisibility="Default" SeparatorColor="BlueViolet">
+            
+         </ListView>
+        </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

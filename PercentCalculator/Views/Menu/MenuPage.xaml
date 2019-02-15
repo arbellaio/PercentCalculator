@@ -1,0 +1,644 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:touchEffect="clr-namespace:TouchEffect;assembly=TouchEffect"
+             xmlns:xamEffects="clr-namespace:XamEffects;assembly=XamEffects"
+             xmlns:resources="clr-namespace:PercentCalculator.Constants"
+             xmlns:menu="clr-namespace:PercentCalculator.ViewModels.Menu;assembly=PercentCalculator"
+             xmlns:customRenderer="clr-namespace:PercentCalculator.CustomRenderer;assembly=PercentCalculator"
+             xmlns:extensions="clr-namespace:PercentCalculator.Extensions;assembly=PercentCalculator"
+             x:Class="PercentCalculator.Views.Menu.MenuPage"
+             NavigationPage.HasBackButton="False">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Spacing="10">
+            <Image Source="logo.png" Scale="0.8" HorizontalOptions="Start" />
+            <Label Text="{extensions:Translate PercentCalculator}"
+                   Style="{DynamicResource VolksWagenStyleMedium}"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand" TextColor="White" FontAttributes="Bold" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="settings.png" Clicked="SettingsPage" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.BindingContext>
+        <menu:MenuViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <Grid Margin="5,5,5,5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+            </Grid.RowDefinitions>
+            <StackLayout
+                x:Name="AdMob"
+                Grid.Row="0"
+                Grid.Column="0"
+                Margin="0,2,0,0"
+                
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="Transparent">
+                <customRenderer:AdBanner Size="FullBanner" BackgroundColor="Transparent" IsVisible="True" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+                <Label TextColor="Black" IsVisible="False" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="Center"
+                       FontSize="Medium" Style="{DynamicResource VolksWagenStyleMedium}" Text="AdBanner" />
+            </StackLayout>
+
+            <StackLayout
+                Grid.Row="1"
+                Grid.Column="0"
+                xamEffects:Commands.Tap="{Binding PercentageCommand}"
+                xamEffects:EffectsConfig.ChildrenInputTransparent="True"
+                xamEffects:TouchEffect.Color="DarkCyan"
+                BackgroundColor="Transparent">
+
+                <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal"
+
+                             HorizontalOptions="FillAndExpand">
+                    <Image Source="pc.png" HorizontalOptions="Start" Margin="2,0,0,0" />
+                    <StackLayout Orientation="Vertical" Spacing="3">
+                        <Label Text="{extensions:Translate PercentageCalculator}" Margin="15,8,0,0"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                        <Label x:Name="PcDescription" Margin="15,0,0,0" FontSize="Small"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                    </StackLayout>
+
+                </StackLayout>
+
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" Margin="0,0,0,0" WidthRequest="450"
+                         BackgroundColor="White"
+                         VerticalOptions="End" />
+            </StackLayout>
+
+            <StackLayout
+                Grid.Row="2"
+                Grid.Column="0"
+                xamEffects:Commands.Tap="{Binding PercentageIncreaseCommand}"
+                xamEffects:EffectsConfig.ChildrenInputTransparent="True"
+                xamEffects:TouchEffect.Color="DarkCyan"
+                BackgroundColor="Transparent">
+
+                <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal"
+                             HorizontalOptions="FillAndExpand">
+                    <Image Source="pi.png" HorizontalOptions="Start" Margin="2,0,0,0" />
+                    <StackLayout Orientation="Vertical" Spacing="3">
+                        <Label Text="{extensions:Translate PercentageIncrease}" Margin="15,8,0,0"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                        <Label x:Name="PiDescription" Margin="15,0,0,0" FontSize="Small"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                    </StackLayout>
+
+                </StackLayout>
+
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand"
+                         BackgroundColor="White"
+                         VerticalOptions="End" />
+            </StackLayout>
+
+            <StackLayout
+                Grid.Row="3"
+                Grid.Column="0"
+                xamEffects:TouchEffect.Color="DarkCyan"
+                xamEffects:Commands.Tap="{Binding PercentageDiscountCommand}"
+                xamEffects:EffectsConfig.ChildrenInputTransparent="True"
+                BackgroundColor="Transparent">
+
+                <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal"
+                             HorizontalOptions="FillAndExpand">
+                    <Image Source="pd.png" HorizontalOptions="Start" Margin="2,0,0,0" />
+                    <StackLayout Orientation="Vertical" Spacing="3">
+                        <Label Text="{extensions:Translate PercentageDiscount}" Margin="15,8,0,0"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                        <Label x:Name="PdDescription" Margin="15,0,0,0" FontSize="Small"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                    </StackLayout>
+
+                </StackLayout>
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" Margin="0,0,0,0" WidthRequest="450"
+                         BackgroundColor="White"
+                         VerticalOptions="End" />
+            </StackLayout>
+
+            <StackLayout
+                Grid.Row="4"
+                Grid.Column="0"
+                xamEffects:TouchEffect.Color="DarkCyan"
+                xamEffects:Commands.Tap="{Binding PercentageOfCommand}"
+                xamEffects:EffectsConfig.ChildrenInputTransparent="True"
+                BackgroundColor="Transparent">
+
+                <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal"
+                             HorizontalOptions="FillAndExpand">
+                    <Image Source="po.png" HorizontalOptions="Start" Margin="2,0,0,0" />
+                    <StackLayout Orientation="Vertical" Spacing="3">
+                        <Label Text="{extensions:Translate PercentageOf}" Margin="15,8,0,0"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                        <Label x:Name="PoDescription" Margin="15,0,0,0" FontSize="Small"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                    </StackLayout>
+
+                </StackLayout>
+
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" Margin="0,0,0,0" WidthRequest="450"
+                         BackgroundColor="White"
+                         VerticalOptions="End" />
+            </StackLayout>
+            <StackLayout
+                Grid.Row="5"
+                Grid.Column="0"
+                xamEffects:Commands.Tap="{Binding PercentageChangeCommand}"
+                xamEffects:EffectsConfig.ChildrenInputTransparent="True"
+                xamEffects:TouchEffect.Color="DarkCyan"
+                BackgroundColor="Transparent">
+
+                <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal"
+                             HorizontalOptions="FillAndExpand">
+                    <Image Source="pch.png" HorizontalOptions="Start" Margin="2,0,0,0" />
+                    <StackLayout Orientation="Vertical" Spacing="3">
+                        <Label Text="{extensions:Translate PercentageChange}" Margin="15,8,0,0"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                        <Label x:Name="PchDescription" Margin="15,0,0,0" FontSize="Small"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                    </StackLayout>
+
+                </StackLayout>
+
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" Margin="0,0,0,0" WidthRequest="450"
+                         BackgroundColor="White"
+                         VerticalOptions="End" />
+            </StackLayout>
+            <StackLayout
+                Grid.Row="6"
+                Grid.Column="0"
+                xamEffects:Commands.Tap="{Binding TipCommand}"
+                xamEffects:EffectsConfig.ChildrenInputTransparent="True"
+                xamEffects:TouchEffect.Color="DarkCyan"
+                BackgroundColor="Transparent">
+
+                <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal"
+                             HorizontalOptions="FillAndExpand">
+                    <Image Source="tc.png" HorizontalOptions="Start" Margin="2,0,0,0" />
+                    <StackLayout Orientation="Vertical" Spacing="3">
+                        <Label Text="{extensions:Translate TipCalculator}" Margin="15,8,0,0"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                        <Label x:Name="TcDescription" Margin="15,0,0,0" FontSize="Small"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                    </StackLayout>
+
+                </StackLayout>
+
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" Margin="0,0,0,0" WidthRequest="450"
+                         BackgroundColor="White"
+                         VerticalOptions="End" />
+            </StackLayout>
+
+            <StackLayout
+                Grid.Row="7"
+                Grid.Column="0"
+                xamEffects:Commands.Tap="{Binding MarginCommand}"
+                xamEffects:EffectsConfig.ChildrenInputTransparent="True"
+                xamEffects:TouchEffect.Color="DarkCyan"
+                BackgroundColor="Transparent">
+
+                <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal"
+                             HorizontalOptions="FillAndExpand">
+                    <Image Source="mc.png" HorizontalOptions="Start" Margin="2,0,0,0" />
+                    <StackLayout Orientation="Vertical" Spacing="3">
+                        <Label Text="{extensions:Translate MarginCalculator}" Margin="15,8,0,0"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                        <Label x:Name="MgDescription" Margin="15,0,0,0" FontSize="Small"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                    </StackLayout>
+
+                </StackLayout>
+
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" Margin="0,0,0,0" WidthRequest="450"
+                         BackgroundColor="White"
+                         VerticalOptions="End" />
+            </StackLayout>
+
+
+
+            <StackLayout
+                Grid.Row="8"
+                Grid.Column="0"
+                xamEffects:Commands.Tap="{Binding MarkUpCommand}"
+                xamEffects:EffectsConfig.ChildrenInputTransparent="True"
+                xamEffects:TouchEffect.Color="DarkCyan"
+                BackgroundColor="Transparent">
+
+                <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal"
+                             HorizontalOptions="FillAndExpand">
+                    <Image Source="pch.png" HorizontalOptions="Start" Margin="2,0,0,0" />
+                    <StackLayout Orientation="Vertical" Spacing="3">
+                        <Label Text="{extensions:Translate MarkupCalculator}" Margin="15,8,0,0"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                        <Label x:Name="MkDescription" Margin="15,0,0,0" FontSize="Small"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                    </StackLayout>
+
+                </StackLayout>
+
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" Margin="0,0,0,0" WidthRequest="450"
+                         BackgroundColor="White"
+                         VerticalOptions="End" />
+            </StackLayout>
+
+
+
+
+            <StackLayout
+                Grid.Row="9"
+                Grid.Column="0"
+                xamEffects:Commands.Tap="{Binding SalesTaxCommand}"
+                xamEffects:EffectsConfig.ChildrenInputTransparent="True"
+                xamEffects:TouchEffect.Color="DarkCyan"
+                BackgroundColor="Transparent">
+
+                <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal"
+                             HorizontalOptions="FillAndExpand">
+                    <Image Source="pd.png" HorizontalOptions="Start" Margin="2,0,0,0" />
+                    <StackLayout Orientation="Vertical" Spacing="3">
+                        <Label Text="{extensions:Translate SalesTax}" Margin="15,8,0,0"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                        <Label x:Name="StDescription" Margin="15,0,0,0" FontSize="Small"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                    </StackLayout>
+
+                </StackLayout>
+
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" Margin="0,0,0,0" WidthRequest="450"
+                         BackgroundColor="White"
+                         VerticalOptions="End" />
+            </StackLayout>
+
+
+            <StackLayout
+            Grid.Row="10"
+            Grid.Column="0"
+            xamEffects:Commands.Tap="{Binding FractionToPercentageCommand}"
+            xamEffects:EffectsConfig.ChildrenInputTransparent="True"
+            xamEffects:TouchEffect.Color="DarkCyan"
+            BackgroundColor="Transparent">
+
+            <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal"
+                         HorizontalOptions="FillAndExpand">
+                <Image Source="tc.png" HorizontalOptions="Start" Margin="2,0,0,0" />
+                <StackLayout Orientation="Vertical" Spacing="3">
+                        <Label Text="{extensions:Translate FractionToPercentage}" Margin="15,8,0,0"
+                           TextColor="{Binding TextColor}"
+                           VerticalOptions="StartAndExpand"
+                           VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                           Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                    <Label x:Name="fractionPercentage" Margin="15,0,0,0" FontSize="Small"
+                           TextColor="{Binding TextColor}"
+                           VerticalOptions="StartAndExpand"
+                           VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                           Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                </StackLayout>
+
+            </StackLayout>
+
+            <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" Margin="0,0,0,0" WidthRequest="450"
+                     BackgroundColor="White"
+                     VerticalOptions="End" />
+            </StackLayout>
+
+
+            <StackLayout
+                Grid.Row="11"
+                Grid.Column="0"
+                xamEffects:Commands.Tap="{Binding CompoundInterestCommand}"
+                xamEffects:EffectsConfig.ChildrenInputTransparent="True"
+                xamEffects:TouchEffect.Color="DarkCyan"
+                BackgroundColor="Transparent">
+
+                <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal"
+                             HorizontalOptions="FillAndExpand">
+                    <Image Source="po.png" HorizontalOptions="Start" Margin="2,0,0,0" />
+                    <StackLayout Orientation="Vertical" Spacing="3">
+                        <Label Text="{extensions:Translate CompoundInterest}" Margin="15,8,0,0"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                        <Label x:Name="compoundInterest" Margin="15,0,0,0" FontSize="Small"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                    </StackLayout>
+
+                </StackLayout>
+
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" Margin="0,0,0,0" WidthRequest="450"
+                         BackgroundColor="White"
+                         VerticalOptions="End" />
+            </StackLayout>
+
+            <StackLayout
+                Grid.Row="12"
+                Grid.Column="0"
+                xamEffects:Commands.Tap="{Binding VatCommand}"
+                xamEffects:EffectsConfig.ChildrenInputTransparent="True"
+                xamEffects:TouchEffect.Color="DarkCyan"
+                BackgroundColor="Transparent">
+
+                <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal"
+                             HorizontalOptions="FillAndExpand">
+                    <Image Source="pi.png" HorizontalOptions="Start" Margin="2,0,0,0" />
+                    <StackLayout Orientation="Vertical" Spacing="3">
+                        <Label Text="{extensions:Translate VatCalculator}" Margin="15,8,0,0"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                        <Label x:Name="vat" Margin="15,0,0,0" FontSize="Small"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                    </StackLayout>
+
+                </StackLayout>
+
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" Margin="0,0,0,0" WidthRequest="450"
+                         BackgroundColor="White"
+                         VerticalOptions="End" />
+            </StackLayout>
+
+
+            <StackLayout
+                Grid.Row="13"
+                Grid.Column="0"
+                xamEffects:Commands.Tap="{Binding DoublingCommand}"
+                xamEffects:EffectsConfig.ChildrenInputTransparent="True"
+                xamEffects:TouchEffect.Color="DarkCyan"
+                BackgroundColor="Transparent">
+
+                <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal"
+                             HorizontalOptions="FillAndExpand">
+                    <Image Source="pc.png" HorizontalOptions="Start" Margin="2,0,0,0" />
+                    <StackLayout Orientation="Vertical" Spacing="3">
+                        <Label Text="{extensions:Translate DoublingCalculator}" Margin="15,8,0,0"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                        <Label x:Name="doubling" Margin="15,0,0,0" FontSize="Small"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                    </StackLayout>
+
+                </StackLayout>
+
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" Margin="0,0,0,0" WidthRequest="450"
+                         BackgroundColor="White"
+                         VerticalOptions="End" />
+            </StackLayout>
+
+
+
+            <StackLayout
+                Grid.Row="14"
+                Grid.Column="0"
+                xamEffects:Commands.Tap="{Binding InflationCommand}"
+                xamEffects:EffectsConfig.ChildrenInputTransparent="True"
+                xamEffects:TouchEffect.Color="DarkCyan"
+                BackgroundColor="Transparent">
+
+                <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal"
+                             HorizontalOptions="FillAndExpand">
+                    <Image Source="pch.png" HorizontalOptions="Start" Margin="2,0,0,0" />
+                    <StackLayout Orientation="Vertical" Spacing="3">
+                        <Label Text="{extensions:Translate InflationCalculator}" Margin="15,8,0,0"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                        <Label x:Name="inflation" Margin="15,0,0,0" FontSize="Small"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                    </StackLayout>
+
+                </StackLayout>
+
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" Margin="0,0,0,0" WidthRequest="450"
+                         BackgroundColor="White"
+                         VerticalOptions="End" />
+            </StackLayout>
+
+
+            <StackLayout
+                Grid.Row="15"
+                Grid.Column="0"
+                xamEffects:Commands.Tap="{Binding CumulationGrowthCommand}"
+                xamEffects:EffectsConfig.ChildrenInputTransparent="True"
+                xamEffects:TouchEffect.Color="DarkCyan"
+                BackgroundColor="Transparent">
+
+                <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal"
+                             HorizontalOptions="FillAndExpand">
+                    <Image Source="po.png" HorizontalOptions="Start" Margin="2,0,0,0" />
+                    <StackLayout Orientation="Vertical" Spacing="3">
+                        <Label Text="{extensions:Translate CumulativeGrowthCalculator}" Margin="15,8,0,0"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                        <Label x:Name="cumulative" Margin="15,0,0,0" FontSize="Small"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                    </StackLayout>
+
+                </StackLayout>
+
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" Margin="0,0,0,0" WidthRequest="450"
+                         BackgroundColor="White"
+                         VerticalOptions="End" />
+            </StackLayout>
+
+
+            <StackLayout
+                Grid.Row="16"
+                Grid.Column="0"
+                xamEffects:Commands.Tap="{Binding MarginVatCommand}"
+                xamEffects:EffectsConfig.ChildrenInputTransparent="True"
+                xamEffects:TouchEffect.Color="DarkCyan"
+                BackgroundColor="Transparent">
+
+                <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal"
+                             HorizontalOptions="FillAndExpand">
+                    <Image Source="pd.png" HorizontalOptions="Start" Margin="2,0,0,0" />
+                    <StackLayout Orientation="Vertical" Spacing="3">
+                        <Label Text="{extensions:Translate MarginVat}" Margin="15,8,0,0"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                        <Label x:Name="mvDescription" Margin="15,0,0,0" FontSize="Small"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                    </StackLayout>
+
+                </StackLayout>
+
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" Margin="0,0,0,0" WidthRequest="450"
+                         BackgroundColor="White"
+                         VerticalOptions="End" />
+            </StackLayout>
+
+
+
+
+            <StackLayout
+                Grid.Row="17"
+                Grid.Column="0"
+                xamEffects:Commands.Tap="{Binding MarginSalesTaxCommand}"
+                xamEffects:EffectsConfig.ChildrenInputTransparent="True"
+                xamEffects:TouchEffect.Color="DarkCyan"
+                BackgroundColor="Transparent">
+
+                <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal"
+                             HorizontalOptions="FillAndExpand">
+                    <Image Source="pch.png" HorizontalOptions="Start" Margin="2,0,0,0" />
+                    <StackLayout Orientation="Vertical" Spacing="3">
+                        <Label Text="{extensions:Translate MarginSalesTax}" Margin="15,8,0,0"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                        <Label x:Name="msDescription" Margin="15,0,0,0" FontSize="Small"
+                               TextColor="{Binding TextColor}"
+                               VerticalOptions="StartAndExpand"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                               Style="{DynamicResource VolksWagenStyleMedium}" />
+
+                    </StackLayout>
+
+                </StackLayout>
+
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" Margin="0,0,0,0" WidthRequest="450"
+                         BackgroundColor="White"
+                         VerticalOptions="End" />
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>
